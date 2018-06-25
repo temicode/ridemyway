@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Ride My way </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css" type="text/css"> 
+        <script type="text/javascript">
+
+        function validation(){
+var name = document.getElementById('name').value;
+var lastname = document.getElementById('lname').value;
+var email = document.getElementById('email').value;
+var password = document.getElementById('password').value;
+if(name=='' || lname==''  || email==''|| password=='')
+{
+    document.getElementById("eresult").innerHTML = "All fields Required";
+    return false;
+}
+else if(name.length<4){
+    document.getElementById("eresult").innerHTML = "Name Must Be Atleast 4 characters";
+    return false;
+}
+else if(password.length<4){
+    document.getElementById("eresult").innerHTML = "Password Must Be Atleast 4 characters";
+    return false;
+}
+else {
+    return true;
+}
+}    
+        </script>
+    </head>
+       <body id="body">
+           <div class="heading">
+               <span class="title">Ride My Way</span>
+               <button class="Sign">
+                   <a href="#modal" class="SignUp"> SIGN UP </a></button>
+           </div>
+
+           <div class="modal_container" id="modal">
+               <div class="modal">
+                   <a href="#" class="close">X</a>
+                   <span class="modal_heading"> Enter your details </span>
+                   <form action="login.html" method="post" onsubmit="return validation();">
+                        <input type= "text" placeholder="FirstName" id="name"><br/>
+                        <input type= "text" placeholder="LastName" id="lname"><br/>
+                        <input type= "text" placeholder="Email" id="email"><br/>
+                        <input type= "password" placeholder="Password" id="password"><br/>
+                        <input type= "submit" class=btnsignup value="SignUp">
+                        </form>
+<a href="login.html" class="signin">Have an account already?</a>
+<a href="#" class="forgot password">Forgot Password?</a>
+</div>
+</div>                           
+ </body> 
+</html>
+
+
+
